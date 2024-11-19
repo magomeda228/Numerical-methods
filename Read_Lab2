@@ -1,1 +1,41 @@
+2nd lab calculates definite integrals numerically using three methods:
+ Rectangle Method
+ Trapezoidal Method
+ Simpson's Method
+It also compares their results to the true value of the integral and visualizes the convergence and error behavior as the number of subintervals increases.
 
+What the Code Does?:
+1) Target Function and True Integral:
+ The function to integrate is $$f(x)=x^3$$
+ The analytical value of the integral is calculated using the formula for the integral of $$f(x)=x^3$$, $$F(x)=x^4/4$$, to provide a true value for comprasion.
+2) Integration Methods:
+ Rectangle Method: Approximates the area using rectangles, summing their areas across 𝑛 subintervals.
+ Trapezoidal Method: Approximates the area using trapezoids formed between the function's values at adjacent points.
+ Simpson's Method: Approximates the area using parabolic arcs through groups of three adjacent points (requires an even number of subintervals).
+3) Computing Results:
+ The number of subintervals (𝑛) is varied from a minimum value (min_n) in steps of step_n, for a total of num_steps steps.
+ For each value of 𝑛, the three methods compute the integral approximation and calculate the absolute error compared to the true integral value.
+4) Visualization:
+ Integral Convergence: Plots the computed integral values for all methods against the number of subintervals n, with the true value as a reference.
+ Error Analysis: Plots the absolute error of each method against n, along with theoretical error estimates using Runge's rule for trapezoidal and Simpson’s methods.
+5) Runge's Error Rule:
+ For trapezoidal: Error $$~C/n^2$$, where C depends on the range and the function's second derivative.
+ For Simpson's: Error $$~C/n^4$$, where C depends on the range and the fourth derivative.
+6) Output Results:
+ Prints the computed integral values and their absolute errors for all methods.
+
+How to Use:
+1) Input Parameters:
+ Left and right boundaries of integration (𝐴,𝐵).
+ Minimum number of subintervals (n_min).
+ Step size for increasing n.
+ Number of steps to compute.
+
+2)Visual Interpretation:
+ The integral convergence plot shows how quickly each method approaches the true integral value as n increases.
+ The error plot highlights the rate of convergence and error magnitude for each method, allowing comparison of their accuracy and efficiency.
+
+Output Highlights:
+ Integral Values: Lists the computed integral values for each method.
+ Errors: Provides the true absolute error for each method.
+ Plots: Visualizes the accuracy of each method and how errors decrease as n increases.
