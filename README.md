@@ -1,7 +1,7 @@
 1st lab implements several numerical methods for finding the root of a given function $$f(x)=4x-log(x)-5$$, which is solved for $$f(x)=0$$.The methods included are:
 1. Bisection Metod $$-$$ Divides an interval and repeatedly narrows down the search range for the root based on the sign of the function at the endpoints.
-2. Simple Iteration Method – Uses a transformation function $$-$$Uses a transformation function $$g(x)$$ to iteratively update guesses for the root.
-3. Newton-Raphson Method – Utilizes the function and its derivative to refine the guess for the root using the formula $$x_{n+1}$$
+2. Simple Iteration Method $$–$$ Uses a transformation function $$-$$Uses a transformation function $$g(x)$$ to iteratively update guesses for the root.
+3. Newton-Raphson Method $$–$$ Utilizes the function and its derivative to refine the guess for the root using the formula $$x_{n+1}=x_n-f(x_n)/f'(x_n)$$
 
 Secant Method – Uses two initial guesses and approximates the derivative of the function to find the root.
 Chord Method – Similar to the Secant Method but uses the endpoints of an interval to iteratively update the root approximation.
