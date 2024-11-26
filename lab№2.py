@@ -79,8 +79,8 @@ plt.xlabel('Количество разбиений (n)')
 plt.ylabel('Значение интеграла')
 plt.legend()
 plt.grid()
-plt.ylim(min(min(results_rectangle), min(results_trapezoidal), min(results_simpson)) - 1e6,
-         max(max(results_rectangle), max(results_trapezoidal), max(results_simpson)) + 1e6)  # Установка диапазона по оси Y
+plt.ylim(min(min(results_rectangle), min(results_trapezoidal), min(results_simpson)) - 1e2,
+         max(max(results_rectangle), max(results_trapezoidal), max(results_simpson)) + 1e2)  # Установка диапазона по оси Y
 plt.show()
 
 # Построение графиков истинной погрешности
@@ -92,9 +92,12 @@ plt.plot(n_values, errors_simpson, label='Истинная погрешност�
 # Оценка погрешности по правилу Рунге
 C_trapezoidal = (B - A) ** 4 / 12
 C_simpson = (B - A) ** 5 / 180
+C_rectangle = (B - A) ** 2 / 2
 runge_errors_trapezoidal = [C_trapezoidal / n ** 2 for n in n_values]
 runge_errors_simpson = [C_simpson / n ** 4 for n in n_values]
+runge_errors_rectangle = [C_rectangle / n for n in n_values]
 
+plt.plot(n_values, runge_errors_rectangle, label='Оценка погрешности (Метод прямоугольников)', linestyle='--', color='green')
 plt.plot(n_values, runge_errors_trapezoidal, label='Оценка погрешности (Метод трапеций)', linestyle='--', color='orange')
 plt.plot(n_values, runge_errors_simpson, label='Оценка погрешности (Метод Симпсона)', linestyle='--', color='green')
 
