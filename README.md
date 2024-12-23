@@ -15,6 +15,6 @@ Calculates errors using the Runge method for different time steps.
 Visualizes error data for 9 numerical methods on logarithmic scales.
 Euler Method for ODE (Other Inputs):
 
-Solves 𝑑𝑇/𝑑𝑡=−0.0059𝑇 using the explicit Euler method.
+Solves 𝑑𝑇/𝑑𝑡 = −0.0059𝑇 using the explicit Euler method.
 Compares the numerical solution with the analytical solution 
-𝑇(𝑡)=𝑇0𝑒−𝑘𝑡 via plots.
+𝑇(𝑡) = 𝑇0𝑒^(−𝑘𝑡) via plots.
