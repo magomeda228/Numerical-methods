@@ -8,3 +8,13 @@ Lab 2: Error Analysis
 Lab 3: Calculation of a definite integral
  The method is used to iteratively solve the system of equations 𝐴*𝑋=𝐵. Each iteration updates the solution vector 𝑋 by solving for each unknown sequentially, using the values from the previous iteration for other unknowns. The algorithm stops when the solution 
  converges or the maximum iteration count is reached.
+ 
+Lab 4: Error Analysis:
+
+Calculates errors using the Runge method for different time steps.
+Visualizes error data for 9 numerical methods on logarithmic scales.
+Euler Method for ODE (Other Inputs):
+
+Solves 𝑑𝑇/𝑑𝑡=−0.0059𝑇 using the explicit Euler method.
+Compares the numerical solution with the analytical solution 
+𝑇(𝑡)=𝑇0𝑒−𝑘𝑡 via plots.
